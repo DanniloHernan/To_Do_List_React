@@ -14,16 +14,15 @@ const ListComponent = ({ tareas = [], dispatch }) => {
     });
   };
 
-  const actionAdd = {
-    type: "add",
-    payload: {
-      id: uuid(),
-      tarea,
-      estado,
-    },
-  };
-
   const handleAdd = () => {
+    const actionAdd = {
+      type: "add",
+      payload: {
+        id: uuid(),
+        tarea,
+        estado,
+      },
+    };
     dispatch(actionAdd);
   };
 
@@ -35,7 +34,6 @@ const ListComponent = ({ tareas = [], dispatch }) => {
             estado
           },
       };
-
     dispatch(checkAction);
   };
 

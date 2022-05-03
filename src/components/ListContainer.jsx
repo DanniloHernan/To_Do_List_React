@@ -11,11 +11,11 @@ const init = () => {
 const ListContainer = () => {
     const [state, dispatch] = useReducer(TareasReducer, [], init);
 
-useEffect(() => {
-    localStorage.setItem("tareas", JSON.stringify(state));
-}, [state]);
+    useEffect(() => {
+        localStorage.setItem("tareas", JSON.stringify(state));
+    }, [state]);
 
-        return (
+    return (
         <>
         <nav className="navbar navbar-dark bg-dark">
             <div className="container-fluid">
